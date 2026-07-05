@@ -4,7 +4,7 @@ const teasers: Teaser[] = [
   {
     title: "Піжама із шовку",
     href: "/catalog/silk-pajama-lavender",
-    image: "/images/teasers/silk.jpg",
+    image: "/teasers/silk.jpg",
     colors: [
       { name: "Сірий", hex: "#B8B8B8" },
       { name: "Бежевий", hex: "#D4C4B0" },
@@ -15,7 +15,7 @@ const teasers: Teaser[] = [
   {
     title: "Піжама бавовняна",
     href: "/catalog/cotton-pajama-cloud",
-    image: "/images/teasers/cotton.jpg",
+    image: "/teasers/cotton.jpg",
     colors: [
       { name: "Білий", hex: "#FFFFFF" },
       { name: "Молочний", hex: "#FAF0E6" },
@@ -24,7 +24,7 @@ const teasers: Teaser[] = [
   {
     title: "Піжама з шортами",
     href: "/catalog/cotton-set-morning",
-    image: "/images/teasers/shorts.jpg",
+    image: "/teasers/shorts.jpg",
     colors: [
       { name: "Сіро-блакитний", hex: "#B0C4DE" },
       { name: "Пісок", hex: "#C4A882" },

@@ -6,22 +6,22 @@ const categories: Category[] = [
   {
     title: 'Шовкові',
     href: '/catalog?category=Шовкові',
-    image: '/images/categories/silk.jpg',
+    image: '/categories/silk.jpg',
   },
   {
     title: 'Бавовняні',
     href: '/catalog?category=Бавовняні',
-    image: '/images/categories/cotton.jpg',
+    image: '/categories/cotton.jpg',
   },
   {
     title: 'Домашні костюми',
     href: '/catalog?category=Домашні костюми',
-    image: '/images/categories/homewear.jpg',
+    image: '/categories/homewear.jpg',
   },
   {
     title: 'Нова колекція',
     href: '/catalog',
-    image: '/images/categories/new.jpg',
+    image: '/categories/new.jpg',
   },
 ];
 
