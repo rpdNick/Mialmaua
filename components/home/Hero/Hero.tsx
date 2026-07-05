@@ -9,14 +9,24 @@ export function Hero() {
   return (
     <section className="py-4 md:py-8">
       <Container>
-        <div className="grid gap-3.5 lg:grid-cols-[1fr_540px] md:grid-cols-[1fr_540px] md:items-center">
-          <div className="flex flex-col gap-7.5">
-            <h1 className="text-4xl md:text-5xl lg:text-8xl font-extrabold">
-              Soft
-              <br />
-              moments.
-            </h1>
-            <p className="max-w-md text-brown-100">Жіночі піжами та домашній одяг — створені для тихого комфорту й затишних ранків.</p>
+        <div
+          className="grid gap-3.5
+        [grid-template-areas:'title'_'desc'_'image'_'cta'_'teasers']
+        md:grid-cols-[1fr_540px]
+        md:gap-x-7.5 md:gap-y-7.5
+        md:[grid-template-areas:'title_image'_'desc_image'_'cta_image'_'teasers_image']"
+        >
+          <h1 className="[grid-area:title] text-4xl md:text-5xl lg:text-8xl font-extrabold">
+            Soft moments.
+          </h1>
+
+          <p className="[grid-area:desc] max-w-md text-brown-100">Жіночі піжами та домашній одяг — створені для тихого комфорту й затишних ранків.</p>
+
+          <div className="[grid-area:image] relative aspect-4/5 md:aspect-auto overflow-hidden rounded-lg">
+            <Image src="/images/hero_banner.jpg" alt="Колекція Mialmaua" sizes="(max-width: 767px) 100vw, 540px" fill className="object-cover" priority />
+          </div>
+
+          <div className="[grid-area:cta]">
             <Button asChild className="h-12 rounded-full pl-6 pr-1.5 w-fit">
               <Link href="/catalog" className="inline-flex items-center gap-3">
                 <span>Купити зараз</span>
@@ -25,10 +35,9 @@ export function Hero() {
                 </span>
               </Link>
             </Button>
-            <HeroTeasers />
           </div>
-          <div className="relative aspect-4/5 overflow-hidden rounded-lg">
-            <Image src="/images/hero_banner.jpg" alt="Колекція Mialmaua" sizes="(max-width: 767px) 100vw, 540px" fill className="object-cover" priority />
+          <div className="[grid-area:teasers]">
+            <HeroTeasers />
           </div>
         </div>
       </Container>
