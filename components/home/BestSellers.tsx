@@ -18,7 +18,7 @@ export async function BestSellers() {
             Дивитись всі
           </Link>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,175px)] gap-6">
+        <div className="grid grid-cols-[repeat(auto-fill,182px)] gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
