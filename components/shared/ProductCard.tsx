@@ -13,7 +13,7 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/catalog/${product.slug}`} className="group flex flex-col gap-2 rounded-lg bg-white transition-shadow">
       <div className="relative aspect-175/233 overflow-hidden rounded-md bg-muted">
-        <Image src={product.images[0]} alt={product.name} fill sizes="175px" className="object-cover transition-transform group-hover:scale-105" />
+        <Image src={product.images[0]} alt={product.name} fill sizes="175px" loading='lazy' className="object-cover transition-transform group-hover:scale-105" />
       </div>
 
       <div className="flex flex-col gap-2">
