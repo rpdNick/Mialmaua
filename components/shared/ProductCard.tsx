@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <p className="text-sm leading-snug text-foreground line-clamp-2 min-h-[38px]">{product.name}</p>
+        <p className="text-sm leading-snug text-foreground line-clamp-2 min-h-9.5">{product.name}</p>
         <p className="text-sm font-semibold text-brown-100">{formatPrice(product.price)}</p>
 
         <div className="flex flex-wrap gap-1.5">
