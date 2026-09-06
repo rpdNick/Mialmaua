@@ -8,6 +8,8 @@ import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { INSTAGRAM_URL } from '@/lib/constants';
 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+
 type ProductDetailsProps = {
   product: ProductWithColors;
 };
@@ -59,6 +61,30 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             Написати в Instagram
           </Link>
         </Button>
+      </div>
+
+      <div className="mt-7">
+        <Accordion defaultValue={['description']} type="multiple" className="w-full">
+          <AccordionItem className='' value="description">
+            <AccordionTrigger className="text-lg font-semibold">Опис</AccordionTrigger>
+            <AccordionContent>{product.description ?? '—'}</AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="material">
+            <AccordionTrigger className="text-lg font-semibold">Склад та догляд</AccordionTrigger>
+            <AccordionContent>
+              <p>Матеріал: {product.material ?? '—'}</p>
+              <p>Догляд: делікатне прання при 30°C, не відбілювати.</p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="shipping" >
+            <AccordionTrigger className="text-lg font-semibold">Доставка та оплата</AccordionTrigger>
+            <AccordionContent>Доставка Новою Поштою. Оплата: накладений платіж або карткою онлайн.</AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="returns">
+            <AccordionTrigger className="text-lg font-semibold">Повернення та обмін</AccordionTrigger>
+            <AccordionContent>Повернення протягом 14 днів, якщо товар не використовувався...</AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
