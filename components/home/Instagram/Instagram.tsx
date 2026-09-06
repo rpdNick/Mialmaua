@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Container } from "@/components/shared/Container"
 import { InstagramPhoto, type InstagramPost } from "./InstagramPhoto"
-
-const INSTAGRAM_URL = "https://www.instagram.com"
+import { INSTAGRAM_URL } from "@/lib/constants"
 
 const posts: InstagramPost[] = [
   { image: "/instagram/img-1.jpg", alt: "Mialmaua в Instagram 1"},

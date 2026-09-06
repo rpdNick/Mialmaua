@@ -27,7 +27,7 @@ export function Hero() {
           </div>
 
           <div className="[grid-area:cta]">
-            <Button asChild className="h-12 rounded-full pl-6 pr-1.5 w-fit">
+            <Button asChild size="lg" variant="default" className="rounded-full pl-6 pr-1.5 w-fit">
               <Link href="/catalog" className="inline-flex items-center gap-3">
                 <span>Купити зараз</span>
                 <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white text-black">

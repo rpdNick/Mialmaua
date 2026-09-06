@@ -20,7 +20,7 @@ async function main() {
       description: "Легка шовкова піжама для комфортного сну.",
       material: "Шовк",
       category: "Шовкові",
-      images: ["/products/pajama-1.jpg"],
+      images: ["/products/pajama-1.jpg", "/products/pajama-2.jpg"],
       sizes: ["XS", "S", "M", "L", "XL"],
       colors: {
         create: [
