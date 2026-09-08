@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { Container } from '@/components/shared/Container';
 import { ProductGallery } from '@/components/product/ProductGallery';
 import { ProductDetails } from '@/components/product/ProductDetails';
+import { SimilarProducts } from '@/components/product/similarProducts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -25,6 +26,7 @@ export default async function ProductPage({ params }: Props) {
           <ProductGallery images={product.images} name={product.name} />
           <ProductDetails product={product} />
         </div>
+        <SimilarProducts product={product} />
       </Container>
     </section>
   );
