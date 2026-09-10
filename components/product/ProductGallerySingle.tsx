@@ -6,5 +6,5 @@ type ProductGallerySingleProps = {
 };
 
 export function ProductGallerySingle({ src, name }: ProductGallerySingleProps) {
-  return <ProductGalleryImage src={src} alt={name} priority />;
+  return <ProductGalleryImage src={src} alt={name} priority={true} />;
 }

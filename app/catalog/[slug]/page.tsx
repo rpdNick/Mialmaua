@@ -23,7 +23,7 @@ export default async function ProductPage({ params }: Props) {
     <section className="py-4 md:py-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-[minmax(238px,450px)_1fr] gap-9">
-          <ProductGallery images={product.images} name={product.name} />
+          <ProductGallery key={product.slug} images={product.images} name={product.name} />
           <ProductDetails product={product} />
         </div>
         <SimilarProducts product={product} />
