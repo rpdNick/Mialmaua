@@ -26,6 +26,7 @@ export function ProductGalleryCarousel({ images, name }: ProductGalleryCarouselP
 
   return (
     <div className="flex flex-col gap-4">
+      <div className='rounded-md overflow-hidden'>
       <Carousel setApi={setApi} opts={{ duration: 25 }}>
         <CarouselContent className="ml-0">
           {images.map((src, index) => (
@@ -35,6 +36,7 @@ export function ProductGalleryCarousel({ images, name }: ProductGalleryCarouselP
           ))}
         </CarouselContent>
       </Carousel>
+      </div>
 
       <div className="flex gap-2">
         {images.map((src, i) => (
