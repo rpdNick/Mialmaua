@@ -9,7 +9,7 @@ type ProductGalleryProps = {
 export function ProductGallery({ images, name }: ProductGalleryProps) {
   if (images.length <= 1) {
     const src = images[0];
-    if (!src) return null; // якщо масив порожній
+    if (!src) return null;
     return <ProductGallerySingle src={src} name={name} />;
   }
 

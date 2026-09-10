@@ -26,11 +26,11 @@ export function ProductGalleryCarousel({ images, name }: ProductGalleryCarouselP
 
   return (
     <div className="flex flex-col gap-4">
-      <Carousel setApi={setApi} opts={{ duration: 30 }}>
+      <Carousel setApi={setApi} opts={{ duration: 25 }}>
         <CarouselContent className="ml-0">
           {images.map((src, index) => (
             <CarouselItem className="pl-0" key={src}>
-              <ProductGalleryImage src={src} alt={`${name} ${index + 1}`} />
+              <ProductGalleryImage src={src} alt={`${name} ${index + 1}`} priority={index === 0} />
             </CarouselItem>
           ))}
         </CarouselContent>
