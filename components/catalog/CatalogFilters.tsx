@@ -73,7 +73,7 @@ export function CatalogFilters({ categories, sizes, materials, colors, selectedC
         </div>
   
         {hasActiveFilters && (
-          <Button variant="outline" onClick={onReset} className="mt-4 cursor-pointer">
+          <Button variant="outline" onClick={onReset} className="mt-4">
             Скинути фільтри
           </Button>
         )}

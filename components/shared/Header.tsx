@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Navbar } from './Navbar';
 import Image from 'next/image';
 import { Container } from './Container';
+import { ShoppingCart } from 'lucide-react';
 
 export function Header() {
   return (
@@ -13,7 +14,10 @@ export function Header() {
 
         <Navbar />
 
-        <Link href="/cart">Кошик</Link>
+        <Link href="/cart" className="relative">
+          <ShoppingCart className="w-6 h-6" />
+          <span className="absolute -top-2 -right-2 bg-destructive text-white text-xs font-medium rounded-full w-5 h-5 flex items-center justify-center">1</span>
+        </Link>
       </Container>
     </header>
   );
