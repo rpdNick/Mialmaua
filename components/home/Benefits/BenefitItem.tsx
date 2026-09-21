@@ -1,10 +1,4 @@
-import type { LucideIcon } from "lucide-react"
-
-export type Benefit = {
-  title: string
-  description: string
-  icon: LucideIcon
-}
+import type { Benefit } from "./types";
 
 type BenefitItemProps = {
   benefit: Benefit

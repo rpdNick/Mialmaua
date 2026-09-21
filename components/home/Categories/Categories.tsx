@@ -1,6 +1,7 @@
 import { Container } from '@/components/shared/Container';
 import Link from 'next/link';
-import { CategoryCard, type Category } from './CategoryCard';
+import { CategoryCard } from './CategoryCard';
+import type { Category } from './types';
 
 const categories: Category[] = [
   {

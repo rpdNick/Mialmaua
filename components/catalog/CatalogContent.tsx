@@ -4,7 +4,7 @@ import { CatalogSearch } from './CatalogSearch';
 import { CatalogGrid } from './CatalogGrid';
 import { useCatalogFilters } from './useCatalogFilters';
 import { CatalogFilters } from './CatalogFilters';
-import type { ProductWithColors } from "@/components/shared/ProductCard";
+import type { ProductWithColors } from "@/components/product/types";
 
 type CatalogContentProps = {
   products: ProductWithColors[]

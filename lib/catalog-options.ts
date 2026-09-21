@@ -1,4 +1,4 @@
-import type { ProductWithColors } from '@/components/shared/ProductCard';
+import type { ProductWithColors } from '@/components/product/types';
 import type { Color } from '@/generated/prisma/client';
 
 export function getAllSizes(products: ProductWithColors[]): string[] {

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import type { ProductWithColors } from "@/components/shared/ProductCard";
+import type { ProductWithColors } from "@/components/product/types";
 import { filterProducts } from "@/lib/catalog-filter";
 import {
   getAllCategories,

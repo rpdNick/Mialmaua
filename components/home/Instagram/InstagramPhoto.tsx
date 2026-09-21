@@ -1,9 +1,5 @@
-import Image from "next/image"
-
-export type InstagramPost = {
-  image: string
-  alt: string
-}
+import Image from "next/image";
+import type { InstagramPost } from "./types";
 
 type InstagramPhotoProps = {
   post: InstagramPost

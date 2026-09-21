@@ -1,6 +1,7 @@
 import { Truck, RefreshCw, Headphones } from 'lucide-react';
 import { Container } from '@/components/shared/Container';
-import { BenefitItem, type Benefit } from './BenefitItem';
+import { BenefitItem } from './BenefitItem';
+import type { Benefit } from './types';
 
 const benefits: Benefit[] = [
   {

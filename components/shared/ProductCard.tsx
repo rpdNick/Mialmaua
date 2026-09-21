@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
-import type { Product, Color } from '@/generated/prisma/client';
-
-export type ProductWithColors = Product & { colors: Color[] };
+import type { ProductWithColors } from '@/components/product/types';
 
 type ProductCardProps = {
   product: ProductWithColors;

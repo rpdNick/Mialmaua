@@ -1,4 +1,5 @@
-import { HeroTeaserCard, type Teaser } from "./HeroTeaserCard"
+import { HeroTeaserCard } from "./HeroTeaserCard";
+import type { Teaser } from './types';
 
 const teasers: Teaser[] = [
   {

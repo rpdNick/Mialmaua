@@ -1,4 +1,5 @@
-import { ProductCard, type ProductWithColors } from '@/components/shared/ProductCard';
+import { ProductCard } from '@/components/shared/ProductCard';
+import type { ProductWithColors } from '@/components/product/types';
 
 type CatalogGridProps = {
   products: ProductWithColors[];

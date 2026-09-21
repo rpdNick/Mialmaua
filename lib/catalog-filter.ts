@@ -1,14 +1,7 @@
-import type { ProductWithColors } from '@/components/shared/ProductCard';
+import type { ProductWithColors } from '@/components/product/types';
+import type { CatalogFiltersTypes } from '@/components/catalog/types';
 
-export type CatalogFilters = {
-  category: string;
-  sizes: string[];
-  materials: string[];
-  colorId: string[];
-  query: string;
-};
-
-export function filterProducts(products: ProductWithColors[], filters: CatalogFilters) {
+export function filterProducts(products: ProductWithColors[], filters: CatalogFiltersTypes) {
   return products.filter((product) => {
     if (filters.category && product.category !== filters.category) {
       return false;

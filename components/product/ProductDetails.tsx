@@ -1,7 +1,7 @@
 'use client';
 
 import { formatPrice } from '@/lib/utils';
-import type { ProductWithColors } from '@/components/shared/ProductCard';
+import type { ProductWithColors } from '@/components/product/types';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { MoveUpRight } from 'lucide-react';

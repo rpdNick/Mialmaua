@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { ProductCard } from '../shared/ProductCard';
-import type { ProductWithColors } from '../shared/ProductCard';
+import type { ProductWithColors } from '@/components/product/types';
 
 type SimilarProductsProps = {
   product: ProductWithColors;

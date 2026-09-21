@@ -2,19 +2,10 @@ import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Minus, Plus, X } from 'lucide-react';
-
-export type CartItemData = {
-  productId: string;
-  name: string;
-  image: string;
-  color: string;
-  size: string;
-  price: number;
-  quantity: number;
-};
+import type { CartItemType } from './types';
 
 type CartItemProps = {
-  item: CartItemData;
+  item: CartItemType;
 };
 
 export default function CartItem({ item }: CartItemProps) {

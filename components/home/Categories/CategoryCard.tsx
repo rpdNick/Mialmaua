@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-export type Category = {
-  title: string;
-  href: string;
-  image: string;
-};
+import type { Category } from './types';
 
 type CategoryCardProps = {
   category: Category;

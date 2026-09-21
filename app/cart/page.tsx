@@ -1,8 +1,9 @@
 import { Container } from '@/components/shared/Container';
 import CartItem from '@/components/cart/CartItem';
 import CartSummary from '@/components/cart/CartSummary';
+import type { CartItemType } from '@/components/cart/types';
 
-const mockItems = [
+const mockItems: CartItemType[] = [
   {
     productId: '1',
     name: 'Шовкова піжама «Лаванда»',

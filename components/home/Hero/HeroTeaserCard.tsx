@@ -1,17 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-type TeaserColor = {
-  name: string;
-  hex: string;
-};
-
-export type Teaser = {
-  title: string;
-  href: string;
-  image: string;
-  colors: TeaserColor[];
-};
+import type { Teaser } from './types';
 
 type HeroTeaserCardProps = {
   teaser: Teaser;
