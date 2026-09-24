@@ -6,6 +6,8 @@ export const useCartStore = create<CartStore>()(
   persist(
     (set, get) => ({
       items: [],
+      _hasHydrated: false,
+      setHasHydrated: () => set({ _hasHydrated: true }),
 
       addItem: (item) =>
         set((state) => {
@@ -53,6 +55,11 @@ export const useCartStore = create<CartStore>()(
     }),
     {
       name: 'mialmaua-cart',
+      skipHydration: true,
+      partialize: (state) => ({ items: state.items }),
+      onRehydrateStorage: () => () => {
+        useCartStore.getState().setHasHydrated();
+      },
     },
   ),
 );

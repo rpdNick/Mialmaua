@@ -7,11 +7,13 @@ import { CartEmpty } from '@/components/cart/CartEmpty';
 
 export function CartContent() {
   const items = useCartStore((state) => state.items);
+  const hasHydrated = useCartStore((s) => s._hasHydrated);
+  if (!hasHydrated) {
+    return null;
+  }
 
   if (items.length === 0) {
-    return (
-      <CartEmpty />
-    );
+    return <CartEmpty />;
   }
 
   return (
