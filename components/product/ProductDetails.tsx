@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { INSTAGRAM_URL } from '@/lib/constants';
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { useCartStore } from '@/store/cart/cart';
 
 type ProductDetailsProps = {
   product: ProductWithColors;
@@ -17,8 +17,23 @@ type ProductDetailsProps = {
 export function ProductDetails({ product }: ProductDetailsProps) {
   const [selectedColorId, setSelectedColorId] = useState(product.colors[0]?.id ?? '');
   const selectedColor = product.colors.find((c) => c.id === selectedColorId);
-
   const [selectedSize, setSelectedSize] = useState(product.sizes[0] ?? '');
+
+  const addToCart = useCartStore((state) => state.addItem);
+
+  function handleAddToCart() {
+    if (!selectedColor || !selectedSize) return;
+  
+    addToCart({
+      productId: product.id,
+      name: product.name,
+      image: product.images[0] ?? '/products/placeholder-image.webp',
+      color: selectedColor.name,
+      size: selectedSize,
+      price: product.price,
+      quantity: 1,
+    });
+  }
 
   return (
     <div className="min-w-82">
@@ -50,7 +65,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       </div>
 
       <div className="flex flex-col gap-2 mt-7">
-        <Button type="button" variant="default" size="lg" className="flex justify-between rounded-full pl-6 pr-1.5 w-full">
+        <Button type="button" variant="default" size="lg" onClick={handleAddToCart} className="flex justify-between rounded-full pl-6 pr-1.5 w-full">
           Додати в кошик
           <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white text-black">
             <MoveUpRight className="size-4" />
