@@ -3,6 +3,7 @@ import { Navbar } from './Navbar';
 import Image from 'next/image';
 import { Container } from './Container';
 import { CartBadge } from '@/components/cart/CartBadge';
+import { LoginButton } from '@/components/auth/LoginButton';
 
 export function Header() {
   return (
@@ -14,7 +15,10 @@ export function Header() {
 
         <Navbar />
 
-        <CartBadge />
+        <div className="flex items-center gap-3">
+          <LoginButton />
+          <CartBadge />
+        </div>
       </Container>
     </header>
   );
