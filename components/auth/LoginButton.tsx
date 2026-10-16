@@ -1,23 +1,13 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { useModal } from '@/components/shared/modals/ModalContext';
 
-type LoginButtonProps = {
-  className?: string;
-};
-
-export function LoginButton({ className }: LoginButtonProps) {
-  function handleClick() {
-    console.log('Login click — open modal');
-  }
+export function LoginButton() {
+  const { openModal } = useModal();
 
   return (
-    <Button
-      type="button"
-      variant="outline"
-      className={className}
-      onClick={handleClick}
-    >
+    <Button type="button" variant="outline" onClick={() => openModal('login')}>
       Увійти
     </Button>
   );
